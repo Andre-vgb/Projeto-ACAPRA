@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Formulário de Adoção</title>
+</head>
+
+<body>
+
+    <main>
+        <h1>Formulário de Adoção</h1>
+
+        <form>
+
+            <fieldset>
+                <legend>Informações Pessoais</legend>
+
+                <label for="nome">Qual seu nome completo?</label><br>
+                <input type="text" id="nome" name="nome"><br><br>
+
+                <label for="contato">Qual seu número para contato?</label><br>
+                <input type="text" id="contato" name="contato"><br><br>
+
+                <label for="idade">Qual a sua idade?</label><br>
+                <input type="text" id="idade" name="idade"><br><br>
+
+                <label for="renda">Qual a sua renda?</label><br>
+                <input type="text" id="renda" name="renda"><br><br>
+
+                <label for="endereco">Qual seu endereço completo?</label><br>
+                <input type="text" id="endereco" name="endereco"><br><br>
+
+                <label for="moradia">Você mora em casa ou apartamento? Próprio ou alugado?</label><br>
+                <input type="text" id="moradia" name="moradia"><br><br>
+            </fieldset>
+
+            <fieldset>
+                <legend>Informações sobre a Adoção</legend>
+
+                <label for="animal">Qual animal você tem interesse em adotar?</label><br>
+                <input type="text" id="animal" name="animal"><br><br>
+
+                <label for="outros_animais">Você tem outros animais? Se sim, quantos e quais?</label><br>
+                <input type="text" id="outros_animais" name="outros_animais"><br><br>
+
+                <p>São castrados e vacinados?</p>
+                <label><input type="radio" name="castrados" value="sim"> Sim</label>
+                <label><input type="radio" name="castrados" value="nao"> Não</label><br><br>
+
+                <p>Todos da sua residência concordam com a adoção?</p>
+                <label><input type="radio" name="residencia_concorda" value="sim"> Sim</label>
+                <label><input type="radio" name="residencia_concorda" value="nao"> Não</label><br><br>
+
+                <label for="local">Qual o local em que o animal irá ficar? Possui espaço adequado e cercado?</label><br>
+                <input type="text" id="local" name="local"><br><br>
+
+                <p>O animal terá acesso à rua?</p>
+                <label><input type="radio" name="acesso_rua" value="sim"> Sim</label>
+                <label><input type="radio" name="acesso_rua" value="nao"> Não</label>
+                <label><input type="radio" name="acesso_rua" value="nao_sei"> Não sei</label><br><br>
+
+                <label for="condicoes">Você tem condições físicas, mentais e financeiras de manter um
+                    animal?</label><br>
+                <textarea id="condicoes" name="condicoes" rows="3" cols="50"></textarea><br><br>
+
+                <p>A castração e vacinação do animal é OBRIGATÓRIA. Você concorda com isso?</p>
+                <label><input type="radio" name="castracao_obrigatoria" value="sim"> Sim</label>
+                <label><input type="radio" name="castracao_obrigatoria" value="nao"> Não</label><br><br>
+
+                <p>Existe uma taxa de adoção colaborativa de R$30,00. Você concorda em contribuir?</p>
+                <label><input type="radio" name="taxa" value="sim"> Sim</label>
+                <label><input type="radio" name="taxa" value="nao"> Não</label><br><br>
+            </fieldset>
+
+            <fieldset>
+                <legend>Documentos Obrigatórios</legend>
+
+                <section>
+                    <p>Favor enviar os seguintes documentos:</p>
+                    <ul>
+                        <li>Foto do RG</li>
+                        <li>Foto do comprovante de renda</li>
+                        <li>Foto do local onde o animal irá ficar (terreno, casa, canil...)</li>
+                        <li>Se tiver outros animais, foto dos mesmos e das carteiras de vacinação</li>
+                    </ul>
+                </section>
+
+                <label for="documentos">Anexar arquivos:</label><br>
+                <input type="file" id="documentos" name="documentos" multiple><br><br>
+            </fieldset>
+
+            <footer>
+                <button type="reset">Limpar formulário</button>
+                <button type="submit">Enviar</button>
+            </footer>
+
+        </form>
+    </main>
+
+</body>
+
+</html>
