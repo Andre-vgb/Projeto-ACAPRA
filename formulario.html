@@ -4,20 +4,197 @@
 <head>
     <meta charset="UTF-8">
     <title>Formulário de Adoção</title>
+    <link rel="stylesheet" href="assets/style.css">
 </head>
 
+<style>
+    section {
+        background-color: white;
+        border-radius: var(--border-radius);
+        padding: 2rem;
+        margin-bottom: 2rem;
+        box-shadow: var(--sombra);
+    }
+
+    section h2 {
+        color: var(--cor-primaria);
+        font-size: 2rem;
+        margin-bottom: 2rem;
+        text-align: center;
+        position: relative;
+    }
+
+    section h2::after {
+        content: '';
+        position: absolute;
+        bottom: -10px;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 100px;
+        height: 3px;
+        background: linear-gradient(135deg, var(--cor-primaria), var(--cor-hover));
+        border-radius: 2px;
+    }
+
+    fieldset {
+        border: 2px solid var(--cor-secundaria);
+        border-radius: var(--border-radius);
+        padding: 2rem;
+        margin-bottom: 2rem;
+        background: linear-gradient(135deg, rgba(255, 107, 107, 0.05), rgba(195, 177, 230, 0.05));
+    }
+
+    legend {
+        background: linear-gradient(135deg, var(--cor-primaria), var(--cor-hover));
+        color: white;
+        padding: 0.5rem 1.5rem;
+        border-radius: 25px;
+        font-weight: 600;
+        font-size: 1.1rem;
+        box-shadow: var(--sombra);
+    }
+
+    label {
+        display: block;
+        margin-top: 1rem;
+        margin-bottom: 0.5rem;
+        font-weight: 600;
+        color: var(--cor-texto);
+    }
+
+    input[type="text"],
+    input[type="email"],
+    input[type="tel"],
+    textarea {
+        width: 100%;
+        padding: 0.8rem;
+        border: 2px solid #ddd;
+        border-radius: 10px;
+        font-size: 1rem;
+        transition: all 0.3s ease;
+        background-color: white;
+        margin-bottom: 1rem;
+    }
+
+    input[type="text"]:focus,
+    input[type="email"]:focus,
+    input[type="tel"]:focus,
+    textarea:focus {
+        outline: none;
+        border-color: var(--cor-primaria);
+        box-shadow: 0 0 0 3px rgba(255, 107, 107, 0.2);
+        transform: translateY(-2px);
+    }
+
+    input[type="radio"] {
+        margin-right: 0.5rem;
+        margin-left: 1rem;
+        transform: scale(1.2);
+        accent-color: var(--cor-primaria);
+    }
+
+    label:has(input[type="radio"]) {
+        display: inline-block;
+        margin-right: 1rem;
+        margin-bottom: 1rem;
+        font-weight: 500;
+        cursor: pointer;
+        padding: 0.5rem;
+        border-radius: 5px;
+        transition: background-color 0.3s ease;
+    }
+
+    label:has(input[type="radio"]):hover {
+        background-color: rgba(255, 107, 107, 0.1);
+    }
+
+    p {
+        font-weight: 600;
+        margin-top: 1.5rem;
+        margin-bottom: 0.5rem;
+    }
+
+    textarea {
+        resize: vertical;
+        min-height: 100px;
+    }
+
+    input[type="file"] {
+        width: 100%;
+        padding: 1rem;
+        border: 2px dashed var(--cor-primaria);
+        border-radius: 10px;
+        background: linear-gradient(135deg, rgba(255, 107, 107, 0.05), rgba(195, 177, 230, 0.05));
+        cursor: pointer;
+        transition: all 0.3s ease;
+        margin-top: 0.5rem;
+    }
+
+    input[type="file"]:hover,
+    input[type="file"]:focus {
+        border-color: var(--cor-hover);
+        background: linear-gradient(135deg, rgba(255, 107, 107, 0.1), rgba(195, 177, 230, 0.1));
+        transform: translateY(-2px);
+    }
+
+    li {
+        margin-bottom: 0.5rem;
+        padding-left: 0.5rem;
+    }
+
+    h4 {
+        color: var(--cor-primaria);
+        margin-bottom: 1rem;
+        font-size: 1.2rem;
+    }
+
+    input:valid {
+        border-color: #4CAF50;
+    }
+
+    input:invalid:not(:placeholder-shown) {
+        border-color: #f44336;
+    }
+
+    fieldset:hover {
+        background: linear-gradient(135deg, rgba(255, 107, 107, 0.08), rgba(195, 177, 230, 0.08));
+    }
+
+    input[type="text"]:hover,
+    input[type="email"]:hover,
+    input[type="tel"]:hover,
+    textarea:hover {
+        border-color: var(--cor-secundaria);
+    }
+</style>
+
 <body style="font-family: Arial, sans-serif; background-color: #E5DBEB; color: #000; padding: 20px;">
-    <header>
-        <h1>🐾 ACAPRA</h1>
-        <nav>
-            <a href="Inicio.html">Início</a>
-            <a href="adotar.html">Adotar</a>
-            <a href="QuemSomos.html">Quem Somos?</a>
-            <a href="Dúvidas.html">Dúvidas?</a>
-            <a href="Noticias.html">Notícias</a>
-            <a href="RedeSociais.html">Contatos</a>
-        </nav>
+    <header role="banner">
+        <div class="header-container">
+            <a href="#main" class="logo" aria-label="ACAPRA - Ir para conteúdo principal">
+                🐾 ACAPRA
+            </a>
+
+            <input type="checkbox" id="menu-toggle" class="menu-toggle" aria-hidden="true">
+            <label for="menu-toggle" class="menu-icon" aria-label="Abrir menu de navegação">
+                <span></span>
+                <span></span>
+                <span></span>
+            </label>
+
+            <nav role="navigation" aria-label="Navegação principal">
+                <ul>
+                    <li><a href="Inicio.html" aria-current="page">Início</a></li>
+                    <li><a href="adotar.html">Adotar</a></li>
+                    <li><a href="QuemSomos.html">Quem Somos?</a></li>
+                    <li><a href="Duvidas.html">Dúvidas?</a></li>
+                    <li><a href="Noticias.html">Notícias</a></li>
+                    <li><a href="RedeSociais.html">Contatos</a></li>
+                </ul>
+            </nav>
+        </div>
     </header>
+    
     <main>
         <section>
             <h2>Formulário de Adoção</h2>
@@ -88,39 +265,36 @@
 
         <section>
 
-        <fieldset>
-            <legend>Documentos Obrigatórios</legend>
-            <h4>Favor enviar os seguintes documentos:</h4>
+            <fieldset>
+                <legend>Documentos Obrigatórios</legend>
+                <h4>Favor enviar os seguintes documentos:</h4>
                 <ul>
                     <li>Foto do RG</li>
                     <li>Foto do comprovante de renda</li>
                     <li>Foto do local onde o animal irá ficar (terreno, casa, canil...)</li>
                     <li>Se tiver outros animais, foto dos mesmos e das carteiras de vacinação</li>
                 </ul>
-            
 
-            <label for="documentos" style="margin: 5px;">Anexar arquivos:</label><br>
-            <input type="file" id="documentos" name="documentos" multiple><br>
-        </fieldset>
+
+                <label for="documentos" style="margin: 5px;">Anexar arquivos:</label><br>
+                <input type="file" id="documentos" name="documentos" multiple><br>
+            </fieldset>
         </section>
 
         </form>
     </main>
 
-    <footer style="background-color:#C3B1E6 ; border-radius: 20px; padding-top: 10px;">
-        <ul>
-            <li><a href="RedeSociais.html">Rede Sociais</a></li>
-            <li><a href="QuemSomos.html">Quem Somos</a></li>
-            <li><a href="Dúvidas.html">Dúvidas Frequentes</a></li>
-            <li><a href="adotar.html">Adotar</a></li>
-        </ul>
+    <footer role="contentinfo">
+        <nav class="footer-nav" aria-label="Navegação do rodapé">
+            <ul>
+                <li><a href="RedeSociais.html">Rede Sociais</a></li>
+                <li><a href="QuemSomos.html">Quem Somos</a></li>
+                <li><a href="Duvidas.html">Dúvidas Frequentes</a></li>
+                <li><a href="adotar.html">Adotar</a></li>
+            </ul>
         </nav>
-        <section style="display: flex; align-items: center; gap: 20px;">
-            <img src="assets/img/Diversos/LogoAcapra.png" alt="Logo Acapra"
-                style="max-width: 30px; padding-left: 20px;">
-            <p>&copy; <time datetime="2025">2025</time> UNIFEBE. Todos os direitos reservados.</p>
-        </section>
-
+        <div class="footer-info">
+            <p>&copy; 2025 UNIFEBE. Todos os direitos reservados.</p>
         </div>
     </footer>
 
