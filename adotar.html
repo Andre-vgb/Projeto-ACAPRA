@@ -4,19 +4,240 @@
 <head>
     <meta charset="UTF-8">
     <title>Adoção de Animais</title>
+    <link rel="stylesheet" href="assets/style.css">
 </head>
+<style>:root {
+    --cor-fundo: #E5DBEB; /* diferente do principal */
+}
 
+body {
+    padding: 20px;
+}
+
+header {
+    border-radius: var(--border-radius);
+    padding: 2rem;
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+header h1 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+}
+
+nav {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    flex-wrap: wrap;
+}
+
+nav strong a {
+    background-color: rgba(255, 255, 255, 0.3);
+    font-weight: 700;
+}
+
+main {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+section {
+    background-color: white;
+    padding: 2rem;
+    margin-bottom: 2rem;
+}
+
+section h2 {
+    font-size: 2rem;
+    margin-bottom: 2rem;
+    text-align: center;
+    position: relative;
+}
+
+section h2::after {
+    content: '';
+    position: absolute;
+    bottom: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80px;
+    height: 3px;
+    background: linear-gradient(135deg, var(--cor-primaria), var(--cor-hover));
+    border-radius: 2px;
+}
+
+section:first-of-type {
+    text-align: center;
+    background: linear-gradient(135deg, rgba(255, 107, 107, 0.1), rgba(195, 177, 230, 0.1));
+}
+
+section:first-of-type a {
+    display: inline-block;
+    margin: 1rem;
+}
+
+section:first-of-type a:hover {
+    transform: translateY(-10px);
+}
+
+section:first-of-type img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    border: 4px solid var(--cor-primaria);
+    margin-bottom: 1rem;
+}
+
+section:first-of-type button {
+    display: block;
+    border: none;
+    padding: 1rem 2rem;
+    border-radius: 25px;
+    font-size: 1.1rem;
+    font-weight: 600;
+    cursor: pointer;
+    margin: 0 auto;
+}
+
+section:first-of-type button:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
+}
+
+article {
+    background: linear-gradient(135deg, #F8F9FA, #E9ECEF);
+    padding: 2rem;
+    margin-bottom: 2rem;
+    text-align: center;
+    transition: all 0.3s ease;
+    border: 2px solid transparent;
+}
+
+article:hover {
+    transform: translateY(-10px);
+    border-color: var(--cor-primaria);
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.2);
+}
+
+article h3 {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+}
+
+article img {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    border: 3px solid var(--cor-primaria);
+    margin: 0.5rem;
+    transition: transform 0.3s ease;
+}
+
+article img:hover {
+    transform: scale(1.1);
+}
+
+article p {
+    margin: 1rem 0;
+    line-height: 1.6;
+    background-color: white;
+    padding: 1rem;
+    border-radius: 10px;
+}
+
+article a {
+    text-decoration: none;
+}
+
+article button {
+    background: linear-gradient(135deg, #4CAF50, #45a049);
+    border: none;
+    padding: 1rem 2rem;
+    border-radius: 25px;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    margin-top: 1rem;
+}
+
+article button:hover {
+    background: linear-gradient(135deg, #45a049, #3d8b40);
+    transform: translateY(-3px);
+}
+
+footer {
+    background-color: var(--cor-secundaria);
+    margin-top: 2rem;
+}
+
+footer ul {
+    flex-wrap: wrap;
+    gap: 2rem;
+    margin-bottom: 1rem;
+}
+
+footer section {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    background: none;
+    box-shadow: none;
+    padding: 0;
+    margin: 0;
+}
+
+#gatinhos {
+    border-top: 5px solid #FF9800;
+}
+
+#cachorros {
+    border-top: 5px solid #2196F3;
+}
+
+@media (max-width: 768px) {
+    body { padding: 10px; }
+    header { padding: 1.5rem; }
+    header h1 { font-size: 2rem; }
+    nav { gap: 1rem; }
+    nav a { padding: 0.3rem 0.8rem; font-size: 0.9rem; }
+    article { padding: 1.5rem; }
+    article img { width: 100px; height: 100px; }
+    section:first-of-type img { width: 120px; height: 120px; }
+    footer section { flex-direction: column; text-align: center; }
+}
+
+html {
+    scroll-behavior: smooth;
+}
+</style>
 <body style="font-family: Arial, sans-serif; background-color: #E5DBEB; color: #000; padding: 20px;">
-    <header>
-        <h1 style="text-align: center;">🐾 ACAPRA</h1>
-        <nav>
-            <a href="Inicio.html">Início</a>
-            <strong><a href="adotar.html">Adotar</a></strong>
-            <a href="QuemSomos.html">Quem Somos?</a>
-            <a href="Dúvidas.html">Dúvidas?</a>
-            <a href="Noticias.html">Notícias</a>
-            <a href="RedeSociais.html">Contatos</a>
-        </nav>
+    <header role="banner">
+        <div class="header-container">
+            <a href="#main" class="logo" aria-label="ACAPRA - Ir para conteúdo principal">
+                🐾 ACAPRA
+            </a>
+
+            <input type="checkbox" id="menu-toggle" class="menu-toggle" aria-hidden="true">
+            <label for="menu-toggle" class="menu-icon" aria-label="Abrir menu de navegação">
+                <span></span>
+                <span></span>
+                <span></span>
+            </label>
+
+            <nav role="navigation" aria-label="Navegação principal">
+                <ul>
+                    <li><a href="Inicio.html" aria-current="page">Início</a></li>
+                    <li><a href="adotar.html">Adotar</a></li>
+                    <li><a href="QuemSomos.html">Quem Somos?</a></li>
+                    <li><a href="Duvidas.html">Dúvidas?</a></li>
+                    <li><a href="Noticias.html">Notícias</a></li>
+                    <li><a href="RedeSociais.html">Contatos</a></li>
+                </ul>
+            </nav>
+        </div>
     </header>
     <main>
         <section>
@@ -127,19 +348,18 @@
         </section>
         <br>
     </main>
-    <footer style="background-color:#C3B1E6 ; border-radius: 20px; padding-top: 10px;">
-        <ul>
-            <li><a href="RedeSociais.html">Rede Sociais</a></li>
-            <li><a href="QuemSomos.html">Quem Somos</a></li>
-            <li><a href="Dúvidas.html">Dúvidas Frequentes</a></li>
-            <li><a href="adotar.html">Adotar</a></li>
-        </ul>
+    <footer role="contentinfo">
+        <nav class="footer-nav" aria-label="Navegação do rodapé">
+            <ul>
+                <li><a href="RedeSociais-Semantico.html">Rede Sociais</a></li>
+                <li><a href="QuemSomos-Semantico.html">Quem Somos</a></li>
+                <li><a href="Duvidas-Semantico.html">Dúvidas Frequentes</a></li>
+                <li><a href="adotar-Semantico.html">Adotar</a></li>
+            </ul>
         </nav>
-        <section style="display: flex; align-items: center; gap: 20px;">
-            <img src="assets/img/Diversos/LogoAcapra.png" alt="Logo Acapra"
-                style="max-width: 30px; padding-left: 20px;">
-            <p>&copy; <time datetime="2025">2025</time> UNIFEBE. Todos os direitos reservados.</p>
-        </section>
+        <div class="footer-info">
+            <p>&copy; 2025 UNIFEBE. Todos os direitos reservados.</p>
+        </div>
     </footer>
 </body>
 
