@@ -23,6 +23,7 @@ section {
     background-color: white;
     padding: 2rem;
     margin-bottom: 2rem;
+
 }
 
 section h2 {
@@ -32,26 +33,16 @@ section h2 {
     position: relative;
 }
 
-section h2::after {
-    content: '';
-    position: absolute;
-    bottom: -10px;
-    left: 50%;
-    transform: translateX(-50%);
-    width: 80px;
-    height: 3px;
-    background: linear-gradient(135deg, var(--cor-primaria), var(--cor-hover));
-    border-radius: 2px;
-}
-
 section:first-of-type {
     text-align: center;
     background: linear-gradient(135deg, rgba(255, 107, 107, 0.1), rgba(195, 177, 230, 0.1));
+    
 }
 
 section:first-of-type a {
     display: inline-block;
     margin: 1rem;
+    text-decoration: none;
 }
 
 section:first-of-type a:hover {
@@ -165,14 +156,6 @@ footer section {
     margin: 0;
 }
 
-#gatinhos {
-    border-top: 5px solid #FF9800;
-}
-
-#cachorros {
-    border-top: 5px solid #2196F3;
-}
-
 @media (max-width: 768px) {
     body { padding: 10px; }
     header { padding: 1.5rem; }
@@ -217,8 +200,9 @@ html {
     </header>
     <main>
         <section>
+            <div class="selecao">
             <h2>Escolha quem você quer adotar:</h2>
-            <a href="#gatinhos" style="font-size: 0px;">
+            <a  href="#gatinhos" style="font-size: 0px;">
                 <img src="assets/img/PAGINA-ADOÇÃO/P-A-imagemGATO.png" alt="Gatinhos" width="150">
                 <button>Gatinhos</button>
             </a>
@@ -227,6 +211,7 @@ html {
                 <img src="assets/img/PAGINA-ADOÇÃO/P-A-imagemDOG.png" alt="Cachorros" width="150">
                 <button>cachorro</button>
             </a>
+            </div>
         </section>
 
         <section>
