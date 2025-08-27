@@ -3,19 +3,112 @@
 <head>
   <meta charset="UTF-8">
   <title>Notícias - ACAPRA</title>
+  <link rel="stylesheet" href="assets/style.css">
 </head>
+<style>
+ 
+
+section {
+    background-color: white;
+    border-radius: var(--border-radius);
+    padding: 2rem;
+    margin-bottom: 2rem;
+    box-shadow: var(--sombra);
+}
+
+section h2 {
+    color: var(--cor-primaria);
+    font-size: 2rem;
+    margin-bottom: 2rem;
+    text-align: center;
+}
+
+
+article {
+    background: linear-gradient(135deg, #F8F9FA, #E9ECEF);
+    border-radius: var(--border-radius);
+    padding: 2rem;
+    margin-bottom: 2rem;
+    transition: all 0.3s ease;
+    border: 2px solid transparent;
+}
+
+article:hover {
+    transform: translateY(-5px);
+    border-color: var(--cor-primaria);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+}
+
+article h3 {
+    color: var(--cor-primaria);
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+}
+
+article p {
+    line-height: 1.6;
+    background-color: white;
+    padding: 1rem;
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+
+footer section {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    background: none;
+    box-shadow: none;
+    padding: 0;
+    margin: 0;
+}
+
+
+body {
+    padding: 10px;
+}
+
+header {
+    padding: 1.5rem;
+}
+
+header h1 {
+    font-size: 2rem;
+}
+
+nav {
+    gap: 1rem;
+}
+
+</style>
 <body style="font-family: Arial, sans-serif; background-color: #E5DBEB; color: #000; padding: 20px;">
 
-   <header>
-       <h1 style="text-align: center;">🐾 ACAPRA</h1>
-        <nav>
-            <a href="Inicio.html">Início</a></strong>
-            <a href="adotar.html">Adotar</a>
-            <a href="QuemSomos.html">Quem Somos?</a>
-            <a href="Dúvidas.html">Dúvidas?</a>
-           <strong> <a href="Noticias.html">Notícias</a></strong>
-           <a href="RedeSociais.html">Contatos</a>
-        </nav>
+    <header role="banner">
+        <div class="header-container">
+            <a href="#main" class="logo" aria-label="ACAPRA - Ir para conteúdo principal">
+                🐾 ACAPRA
+            </a>
+
+            <input type="checkbox" id="menu-toggle" class="menu-toggle" aria-hidden="true">
+            <label for="menu-toggle" class="menu-icon" aria-label="Abrir menu de navegação">
+                <span></span>
+                <span></span>
+                <span></span>
+            </label>
+
+            <nav role="navigation" aria-label="Navegação principal">
+                <ul>
+                    <li><a href="Inicio.html" aria-current="page">Início</a></li>
+                    <li><a href="adotar.html">Adotar</a></li>
+                    <li><a href="QuemSomos.html">Quem Somos?</a></li>
+                    <li><a href="Duvidas.html">Dúvidas?</a></li>
+                    <li><a href="Noticias.html">Notícias</a></li>
+                    <li><a href="RedeSociais.html">Contatos</a></li>
+                </ul>
+            </nav>
+        </div>
     </header>
   
   <main>
@@ -76,21 +169,20 @@
     </section>
   </main>
 
-  <footer style="background-color:#C3B1E6 ; border-radius: 20px; padding-top: 10px;">
-    <nav>
-      <ul>
-        <li><a href="RedeSociais.html">Rede Sociais</a></li>
-        <li><a href="QuemSomos.html">Quem Somos</a></li>
-        <li><a href="Dúvidas.html">Dúvidas Frequentes</a></li>
-        <li><a href="adotar.html">Adotar</a></li>
-      </ul>
-    </nav>
+  <footer role="contentinfo">
+        <nav class="footer-nav" aria-label="Navegação do rodapé">
+            <ul>
+                <li><a href="RedeSociais-Semantico.html">Rede Sociais</a></li>
+                <li><a href="QuemSomos-Semantico.html">Quem Somos</a></li>
+                <li><a href="Duvidas-Semantico.html">Dúvidas Frequentes</a></li>
+                <li><a href="adotar-Semantico.html">Adotar</a></li>
+            </ul>
+        </nav>
+        <div class="footer-info">
+            <p>&copy; 2025 UNIFEBE. Todos os direitos reservados.</p>
+        </div>
+    </footer>
 
-    <section style="display: flex; align-items: center; gap: 20px;">
-      <img src="assets/img/Diversos/LogoAcapra.png" alt="Logo Acapra" style="max-width: 30px; padding-left: 20px;">
-      <p>&copy; <time datetime="2025">2025</time> UNIFEBE. Todos os direitos reservados.</p>
-    </section>
-  </footer>
 
 </body>
 </html>
