@@ -7,6 +7,44 @@
 body {
     padding: 20px;
 }
+
+/* Estilos para os cards */
+.card {
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    margin-bottom: 20px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.card h3 {
+    color: #444;
+    margin-bottom: 15px;
+    font-size: 1.2em;
+}
+
+.card p {
+    color: #666;
+    line-height: 1.6;
+    margin-bottom: 10px;
+}
+
+.card ul {
+    list-style-position: inside;
+    padding-left: 20px;
+}
+
+.card li {
+    margin-bottom: 5px;
+    color: #666;
+}
+
 :root {
     --cor-primaria: #6C4F9F; /* Roxo principal da logo */
     --cor-secundaria: #FACC15; /* Amarelo de destaque */

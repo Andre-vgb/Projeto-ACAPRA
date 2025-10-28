@@ -5,85 +5,7 @@
   <title>Notícias - ACAPRA</title>
   <link rel="stylesheet" href="assets/style.css">
 </head>
-<style>
- 
-
-section {
-    background-color: white;
-    border-radius: var(--border-radius);
-    padding: 2rem;
-    margin-bottom: 2rem;
-    box-shadow: var(--sombra);
-}
-
-section h2 {
-    color: var(--cor-primaria);
-    font-size: 2rem;
-    margin-bottom: 2rem;
-    text-align: center;
-}
-
-
-article {
-    background: linear-gradient(135deg, #F8F9FA, #E9ECEF);
-    border-radius: var(--border-radius);
-    padding: 2rem;
-    margin-bottom: 2rem;
-    transition: all 0.3s ease;
-    border: 2px solid transparent;
-}
-
-article:hover {
-    transform: translateY(-5px);
-    border-color: var(--cor-primaria);
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
-}
-
-article h3 {
-    color: var(--cor-primaria);
-    font-size: 1.5rem;
-    margin-bottom: 1rem;
-}
-
-article p {
-    line-height: 1.6;
-    background-color: white;
-    padding: 1rem;
-    border-radius: 10px;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-}
-
-
-footer section {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 1rem;
-    background: none;
-    box-shadow: none;
-    padding: 0;
-    margin: 0;
-}
-
-
-body {
-    padding: 10px;
-}
-
-header {
-    padding: 1.5rem;
-}
-
-header h1 {
-    font-size: 2rem;
-}
-
-nav {
-    gap: 1rem;
-}
-
-</style>
-<body style="font-family: Arial, sans-serif; background-color: #E5DBEB; color: #000; padding: 20px;">
+<body>
 
     <header role="banner">
         <div class="header-container">
@@ -119,7 +41,7 @@ nav {
       <h2>Notícias da ACAPRA</h2>
       <p>Acompanhe as últimas novidades e ações da nossa ONG em prol dos animais!</p>
       
-      <article>
+      <article class="card">
         <h3>🐾 Evento reuniu mais de 150 pets e seus tutores. </h3>
         <p>
           Na manhã do dia 17 de agosto, um evento promovido pelo ACIBr, reuiniu mais
@@ -132,7 +54,7 @@ nav {
 
       <hr>
 
-      <article>
+      <article class="card">
         <h3>🐾 Cachorra é encontrada enrolada em cipós no Steffen, em Brusque.</h3>
         <p>
           Um homem que passava próximo do local ouviu e encontrou uma cachorra presa em vários cipós.
@@ -145,7 +67,7 @@ nav {
 
       <hr>
 
-      <article>
+      <article class="card">
         <h3>🐾 Para retomar atividades, Acapra de Brusque cria rifa solidária para pagar dívidas; valor chega a R$ 70 mil</h3>
         <p>
           Acapra de Brusque criou uma rifa solidária para quitar sua dívida de R$70 mil.
@@ -157,7 +79,7 @@ nav {
 
       <hr>
 
-      <article>
+      <article class="card">
         <h3>🐾 Bella, uma cachorra abandonada com seus filhotes, finalmente é adotada.</h3>
         <p>
           Bella é uma cachorra que foi abandonada com seus 8 filhotes em uma noite chuvosa.

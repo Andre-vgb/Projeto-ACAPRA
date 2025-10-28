@@ -7,69 +7,7 @@
   <link rel="stylesheet" href="assets/style.css">
 </head>
 
-<body style="font-family: Arial, sans-serif; background-color: #e5d9ec; color: #050505; padding: 20px;">
-<style>
-  main {
-    max-width: 1200px;
-    margin: 0 auto;
-}
-
-section {
-    background-color: white;
-    border-radius: var(--border-radius);
-    padding: 2rem;
-    margin-bottom: 2rem;
-    box-shadow: var(--sombra);
-}
-
-section h2 {
-    color: var(--cor-primaria);
-    font-size: 2rem;
-    margin-bottom: 2rem;
-    text-align: center;
-}
-
-.cards-container {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 2rem;
-    margin-top: 2rem;
-}
-
-.card {
-    background: linear-gradient(135deg, #F8F9FA, #E9ECEF);
-    border-radius: var(--border-radius);
-    padding: 2rem;
-    text-align: center;
-    transition: all 0.5s ease;
-    border: 2px solid transparent;
-}
-
-.card:hover {
-    transform: translateY(-10px);
-    border-color: var(--cor-primaria);
-    box-shadow: 0 15px 40px rgba(10, 10, 10, 0.2);
-}
-
-.card img {
-    width: 120px;
-    height: 120px;
-    border-radius: 50%;
-    border: 4px solid var(--cor-primaria);
-    margin-bottom: 1rem;
-}
-
-a { 
-  transition: color 0.3s ease; 
-}
-
-.card h3 {
-    color: var(--cor-primaria);
-    font-size: 1.5rem;
-    margin-bottom: 1rem;
-}
-
-</style>
+<body>
   <header role="banner">
         <div class="header-container">
             <a href="#main" class="logo" aria-label="ACAPRA - Ir para conteúdo principal">
@@ -101,7 +39,7 @@ a {
     <!-- Sobre a ACAPRA -->
     <section aria-labelledby="sobre-acapra">
       <h2 id="sobre-acapra" style="text-align: center;">🐾 Sobre</h2>
-      <article>
+      <article class="card">
         <p>
           A ACAPRA (Associação Catarinense de Proteção aos Animais) é uma organização sem fins lucrativos localizada na
           cidade de Brusque - SC, comprometida com a causa animal.
@@ -118,7 +56,7 @@ a {
       <hr>
 
       <!-- Visão -->
-      <article aria-labelledby="visao">
+      <article aria-labelledby="visao" class="card">
         <h3 id="visao">🐾 Visão</h3>
         <p>
           Ser reconhecida como uma referência em proteção animal na cidade de Brusque e região, promovendo o respeito, a
@@ -130,7 +68,7 @@ a {
       <hr>
 
       <!-- Missão -->
-      <article aria-labelledby="missao">
+      <article aria-labelledby="missao" class="card">
         <h3 id="missao">🐾 Missão</h3>
         <p>
           Ser reconhecida como referência em proteção animal em Brusque e região, promovendo respeito, empatia e 
@@ -141,7 +79,7 @@ a {
       <hr>
 
       <!-- Valores -->
-      <article aria-labelledby="valores">
+      <article aria-labelledby="valores" class="card">
         <h3 id="valores">🐾 Valores</h3>
         <ul>
           <li>Amor</li>

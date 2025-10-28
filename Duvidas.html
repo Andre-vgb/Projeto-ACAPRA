@@ -6,113 +6,6 @@
     <title>Dúvidas</title>
     <link rel="stylesheet" href="assets/style.css">
 </head>
-<style>:root {
-    --cor-fundo: #E5DBEB; /* diferente do principal */
-}
-
-
-
-header {
-    border-radius: var(--border-radius);
-    padding: 2rem;
-    text-align: center;
-    margin-bottom: 2rem;
-}
-
-header h1 {
-    font-size: 2.5rem;
-    margin-bottom: 1rem;
-}
-
-nav {
-    display: flex;
-    justify-content: center;
-    gap: 2rem;
-    flex-wrap: wrap;
-}
-
-nav strong a {
-    background-color: rgba(255, 255, 255, 0.3);
-    font-weight: 700;
-}
-
-main {
-    max-width: 1200px;
-    margin: 0 auto;
-}
-
-/* Seções */
-section {
-    padding: 2rem;
-    margin-bottom: 2rem;
-}
-
-section h2 {
-    font-size: 2rem;
-    margin-bottom: 2rem;
-    text-align: center;
-}
-
-/* FAQ */
-.faq-item {
-    background: linear-gradient(135deg, #F8F9FA, #E9ECEF);
-    padding: 1.5rem;
-    margin-bottom: 1rem;
-    border-left: 4px solid var(--cor-primaria);
-    transition: all 0.3s ease;
-}
-
-.faq-item:hover {
-    transform: translateY(-3px);
-    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
-}
-
-.faq-item h3 {
-    font-size: 1.3rem;
-    margin-bottom: 1rem;
-}
-
-.faq-item p {
-    line-height: 1.6;
-    padding: 1rem;
-    border-radius: 10px;
-}
-
-/* FOOTER extra */
-footer {
-    margin-top: 2rem;
-}
-
-footer section {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 1rem;
-    background: none;
-    box-shadow: none;
-    padding: 0;
-    margin: 0;
-}
-
-/* ====== RESPONSIVIDADE ====== */
-@media (max-width: 768px) {
-    body {
-        padding: 10px;
-    }
-
-    header {
-        padding: 1.5rem;
-    }
-
-    header h1 {
-        font-size: 2rem;
-    }
-
-    nav {
-        gap: 1rem;
-    }
-}
-</style>
 <body style="font-family: Arial, sans-serif; background-color: #E5DBEB; color: #000; padding: 20px;">
     <header role="banner">
         <div class="header-container">
@@ -143,7 +36,7 @@ footer section {
         <section>
             <h2>DÚVIDAS</h2>
 
-            <article>
+            <article class="card">
                 <h3>Quais são os requisitos para adotar um animal?</h3>
                 <p>Para adotar um animal, é necessário ser maior de 18 anos, apresentar um documento com foto e
                     comprovante de
@@ -153,7 +46,7 @@ footer section {
                 <br>
             </article>
 
-            <article>
+            <article class="card">
                 <h3>Como funciona o processo de adoção?</h3>
                 <p>O processo de adoção geralmente envolve uma entrevista com o responsável pela ACAPRA, o preenchimento
                     de
@@ -165,7 +58,7 @@ footer section {
                 <br>
             </article>
 
-            <article>
+            <article class="card">
                 <h3>Há alguma taxa para adotar um pet?</h3>
                 <p>Na maioria das vezes, não há uma taxa obrigatória para adoção. Porém, algumas ONGs pedem uma
                     contribuição
@@ -175,7 +68,7 @@ footer section {
                 <br>
             </article>
 
-            <article>
+            <article class="card">
                 <h3>Os animais já vêm vacinados e castrados?</h3>
                 <p>Sim, a maioria dos animais disponíveis para adoção já passou por cuidados veterinários básicos,
                     incluindo
@@ -185,7 +78,7 @@ footer section {
                 <br>
             </article>
 
-            <article>
+            <article class="card">
                 <h3>Posso devolver o animal se não conseguir cuidar dele?</h3>
                 <p>Sim, caso o adotante perceba que não pode continuar cuidando do animal, o ideal é entrar em contato
                     com a
@@ -196,7 +89,7 @@ footer section {
                 <br>
             </article>
 
-            <article>
+            <article class="card">
                 <h3>Quais cuidados devo ter ao adotar um novo pet?</h3>
                 <p>Ao adotar um novo pet, é importante preparar o ambiente da casa, oferecer uma alimentação adequada,
                     garantir
@@ -206,7 +99,7 @@ footer section {
                 <br>
             </article>
 
-            <article>
+            <article class="card">
                 <h3>A ACAPRA aceita doações ou voluntários?</h3>
                 <p>Sim, a ACAPRA aceita tanto doações quanto voluntários. Doações financeiras ou de itens como ração,
                     medicamentos,
