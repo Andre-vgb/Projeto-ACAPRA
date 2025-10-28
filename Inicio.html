@@ -6,212 +6,9 @@
     <link rel="stylesheet" href="assets/style.css">
 </head>
 
-<style>
 
-/* Inicio.html */
-
-.hero {
-    background: linear-gradient(135deg, rgba(255, 107, 107, 0.1), rgba(195, 177, 230, 0.1));
-    border-radius: var(--border-radius);
-    padding: 3rem;
-    text-align: center;
-    margin-bottom: 3rem;
-    box-shadow: var(--sombra);
-}
-
-.hero h1 {
-    font-size: 2.5rem;
-    color: var(--cor-primaria);
-    margin-bottom: 1rem;
-}
-
-.hero p {
-    font-size: 1.2rem;
-    margin-bottom: 2rem;
-    color: var(--cor-texto);
-}
-
-.hero img {
-    max-width: 500px;
-    width: 100%;
-    border-radius: var(--border-radius);
-    box-shadow: var(--sombra);
-}
-
-/* Seções */
-section {
-    margin-bottom: 3rem;
-}
-
-.section-title {
-    text-align: center;
-    font-size: 2.2rem;
-    color: var(--cor-primaria);
-    margin-bottom: 2rem;
-    position: relative;
-}
-
-.section-title::after {
-    content: '';
-    position: absolute;
-    bottom: -10px;
-    left: 50%;
-    transform: translateX(-50%);
-    width: 100px;
-    height: 4px;
-    background: linear-gradient(135deg, var(--cor-primaria), var(--cor-hover));
-    border-radius: 2px;
-}
-
-.btn {
-    display: flex;
-    justify-content: center; 
-    gap: 1rem;               
-    flex: auto;  
-    color: white;
-    padding: 1rem 2rem;  
-    margin: 0.5rem;               
-    border: none;                
-    border-radius: 25px;         
-    font-size: 1rem;            
-    font-weight: 600;           
-    text-decoration: none;       
-    cursor: pointer;             
-    transition: all 0.3s ease;   
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2); 
-    background-color: var(--cor-primaria);
-}
-
-.btn:hover, .btn:focus {
-    transform: translateY(-3px);            
-    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3); 
-}
-
-
-
-/* Alerta */
-.alert {
-    background: linear-gradient(135deg, #FFF3CD, #FFEAA7);
-    border-left: 5px solid var(--cor-primaria);
-    border-radius: 10px;
-    padding: 2rem;
-    margin: 2rem 0;
-    box-shadow: var(--sombra);
-}
-
-.alert h2 {
-    color: #856404;
-    margin-bottom: 1rem;
-    font-size: 1.8rem;
-}
-
-.alert-content {
-    background-color: white;
-    padding: 1.5rem;
-    border-radius: 10px;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-}
-
-.alert-content p {
-    margin: 0;
-    line-height: 1.6;
-}
-
-.alert-content strong {
-    color: var(--cor-primaria);
-}
-
-
-
-/* Estatísticas */
-.stats {
-    background-color: white;
-    border-radius: var(--border-radius);
-    padding: 2rem;
-    margin: 2rem 0;
-    box-shadow: var(--sombra);
-}
-
-.stats-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 1rem;
-}
-
-.stat-item {
-    background: linear-gradient(135deg, #F8F9FA, #E9ECEF);
-    padding: 1.5rem;
-    border-radius: 10px;
-    border-left: 4px solid var(--cor-primaria);
-    transition: transform 0.3s ease;
-}
-
-.stat-item:hover,
-.stat-item:focus-within {
-    transform: translateY(-5px);
-    box-shadow: var(--sombra);
-}
-
-.stat-item strong {
-    color: var(--cor-primaria);
-    display: block;
-    margin-bottom: 0.5rem;
-}
-
-/* Como ajudar */
-.help-section {
-    background-color: white;
-    border-radius: var(--border-radius);
-    padding: 2rem;
-    margin: 2rem 0;
-    box-shadow: var(--sombra);
-}
-
-.help-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 2rem;
-}
-
-.help-card {
-    background: linear-gradient(135deg, #F8F9FA, #E9ECEF);
-    border-radius: var(--border-radius);
-    padding: 2rem;
-    text-align: center;
-    transition: all 0.3s ease;
-    border: 2px solid transparent;
-}
-
-.help-card:hover,
-.help-card:focus-within {
-    transform: translateY(-10px);
-    border-color: var(--cor-primaria);
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
-}
-
-.help-card img {
-    width: 120px;
-    height: 120px;
-    border-radius: 50%;
-    border: 4px solid var(--cor-primaria);
-    margin-bottom: 1rem;
-    object-fit: cover;
-}
-
-.help-card h3 {
-    color: var(--cor-primaria);
-    margin-bottom: 1rem;
-    font-size: 1.3rem;
-}
-
-.help-card p {
-    line-height: 1.6;
-    text-align: left;
-}
- 
-</style>
 <body>
-    <body style="font-family: Arial, sans-serif; background-color: #E5DBEB; color: #000; padding: 20px;">
+    <body>
     <header role="banner">
         <div class="header-container">
             <a href="#main" class="logo" aria-label="ACAPRA - Ir para conteúdo principal">
@@ -302,6 +99,65 @@ section {
                     <article class="stat-item">
                         <strong>Apoio essencial:</strong> Lares temporários e clínicas parceiras
                     </article>
+                </div>
+            </section>
+
+            <!-- Galeria de Animais -->
+
+            <section class="pet-gallery" aria-labelledby="gallery-title">
+                <h2 id="gallery-title" class="section-title">Nossos Amigos para Adoção</h2>
+                <div class="gallery-grid">
+                    <article class="pet-card">
+                        <img class="pet-card-image" src="assets/img/CACHORROS/cleo.jpeg" alt="Cleo, um cachorro feliz">
+                        <div class="pet-card-info">
+                            <h3>Cleo</h3>
+                            <p>Uma cachorrinha dócil e brincalhona, pronta para alegrar sua casa.</p>
+                            <a href="adotar.html">Adotar Cleo</a>
+                        </div>
+                    </article>
+                    <article class="pet-card">
+                        <img class="pet-card-image" src="assets/img/CACHORROS/Luma.png" alt="Luma, uma cachorrinha de porte médio">
+                        <div class="pet-card-info">
+                            <h3>Luma</h3>
+                            <p>Linda e cheia de energia. Perfeita para famílias ativas.</p>
+                            <a href="adotar.html">Adotar Luma</a>
+                        </div>
+                    </article>
+                    <article class="pet-card">
+                        <img class="pet-card-image" src="assets/img/CACHORROS/Mavie.png" alt="Mavie, um filhote fofo">
+                        <div class="pet-card-info">
+                            <h3>Mavie</h3>
+                            <p>Filhote meiga e curiosa, esperando por muito carinho.</p>
+                            <a href="adotar.html">Adotar Mavie</a>
+                        </div>
+                    </article>
+                    <article class="pet-card">
+                        <img class="pet-card-image" src="assets/img/gatos/GATO-LUZIA.png" alt="Luzia, uma gatinha calma">
+                        <div class="pet-card-info">
+                            <h3>Luzia</h3>
+                            <p>Gata tranquila e independente, ideal para apartamentos.</p>
+                            <a href="adotar.html">Adotar Luzia</a>
+                        </div>
+                    </article>
+                    <article class="pet-card">
+                        <img class="pet-card-image" src="assets/img/gatos/GATO-BARTO.png" alt="Barto, um gato brincalhão">
+                        <div class="pet-card-info">
+                            <h3>Barto</h3>
+                            <p>Gato jovem e cheio de vida, adora caçar brinquedos.</p>
+                            <a href="adotar.html">Adotar Barto</a>
+                        </div>
+                    </article>
+                    <article class="pet-card">
+                        <img class="pet-card-image" src="assets/img/CACHORROS/Glória.png" alt="Glória, um cachorro grande">
+                        <div class="pet-card-info">
+                            <h3>Glória</h3>
+                            <p>Porte grande, coração maior ainda. Uma companheira leal.</p>
+                            <a href="adotar.html">Adotar Glória</a>
+                        </div>
+                    </article>
+                </div>
+                <div class="action-section" style="margin-top: 3rem;">
+                    <a href="adotar.html" class="btn">Ver Todos os Animais para Adoção</a>
                 </div>
             </section>
 

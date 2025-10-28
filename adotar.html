@@ -3,179 +3,15 @@
 
 <head>
     <meta charset="UTF-8">
-    <title>Adoção de Animais</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Adote um Amigo | ACAPRA</title>
     <link rel="stylesheet" href="assets/style.css">
 </head>
-<style>:root {
-    --cor-fundo: #E5DBEB; /* diferente do principal */
-}
 
-
-
-
-
-main {
-    max-width: 1200px;
-    margin: 0 auto;
-}
-
-section {
-    background-color: white;
-    padding: 2rem;
-    margin-bottom: 2rem;
-
-}
-
-section h2 {
-    font-size: 2rem;
-    margin-bottom: 2rem;
-    text-align: center;
-    position: relative;
-}
-
-section:first-of-type {
-    text-align: center;
-    background: linear-gradient(135deg, rgba(255, 107, 107, 0.1), rgba(195, 177, 230, 0.1));
-    
-}
-
-section:first-of-type a {
-    display: inline-block;
-    margin: 1rem;
-    text-decoration: none;
-}
-
-section:first-of-type a:hover {
-    transform: translateY(-10px);
-}
-
-section:first-of-type img {
-    width: 150px;
-    height: 150px;
-    border-radius: 50%;
-    border: 4px solid var(--cor-primaria);
-    margin-bottom: 1rem;
-}
-
-section:first-of-type button {
-    display: block;
-    border: none;
-    padding: 1rem 2rem;
-    border-radius: 25px;
-    font-size: 1.1rem;
-    font-weight: 600;
-    cursor: pointer;
-    margin: 0 auto;
-}
-
-section:first-of-type button:hover {
-    transform: translateY(-3px);
-    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
-}
-
-article {
-    background: linear-gradient(135deg, #F8F9FA, #E9ECEF);
-    padding: 2rem;
-    margin-bottom: 2rem;
-    text-align: center;
-    transition: all 0.3s ease;
-    border: 2px solid transparent;
-}
-
-article:hover {
-    transform: translateY(-10px);
-    border-color: var(--cor-primaria);
-    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.2);
-}
-
-article h3 {
-    font-size: 1.5rem;
-    margin-bottom: 1rem;
-}
-
-article img {
-    width: 120px;
-    height: 120px;
-    border-radius: 50%;
-    border: 3px solid var(--cor-primaria);
-    margin: 0.5rem;
-    transition: transform 0.3s ease;
-}
-
-article img:hover {
-    transform: scale(1.1);
-}
-
-article p {
-    margin: 1rem 0;
-    line-height: 1.6;
-    background-color: white;
-    padding: 1rem;
-    border-radius: 10px;
-}
-
-article a {
-    text-decoration: none;
-}
-
-article button {
-    background: linear-gradient(135deg, #4CAF50, #45a049);
-    border: none;
-    padding: 1rem 2rem;
-    border-radius: 25px;
-    font-size: 1rem;
-    font-weight: 600;
-    cursor: pointer;
-    margin-top: 1rem;
-}
-
-article button:hover {
-    background: linear-gradient(135deg, #45a049, #3d8b40);
-    transform: translateY(-3px);
-}
-
-footer {
-    background-color: var(--cor-secundaria);
-    margin-top: 2rem;
-}
-
-footer ul {
-    flex-wrap: wrap;
-    gap: 2rem;
-    margin-bottom: 1rem;
-}
-
-footer section {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 1rem;
-    background: none;
-    box-shadow: none;
-    padding: 0;
-    margin: 0;
-}
-
-@media (max-width: 768px) {
-    body { padding: 10px; }
-    header { padding: 1.5rem; }
-    header h1 { font-size: 2rem; }
-    nav { gap: 1rem; }
-    nav a { padding: 0.3rem 0.8rem; font-size: 0.9rem; }
-    article { padding: 1.5rem; }
-    article img { width: 100px; height: 100px; }
-    section:first-of-type img { width: 120px; height: 120px; }
-    footer section { flex-direction: column; text-align: center; }
-}
-
-html {
-    scroll-behavior: smooth;
-}
-</style>
-<body style="font-family: Arial, sans-serif; background-color: #E5DBEB; color: #000; padding: 20px;">
+<body>
     <header role="banner">
         <div class="header-container">
-            <a href="#main" class="logo" aria-label="ACAPRA - Ir para conteúdo principal">
+            <a href="Inicio.html" class="logo" aria-label="ACAPRA - Página Inicial">
                 🐾 ACAPRA
             </a>
 
@@ -188,134 +24,115 @@ html {
 
             <nav role="navigation" aria-label="Navegação principal">
                 <ul>
-                    <li><a href="Inicio.html" aria-current="page">Início</a></li>
-                    <li><a href="adotar.html">Adotar</a></li>
+                    <li><a href="Inicio.html">Início</a></li>
+                    <li><a href="#" aria-current="page">Adotar</a></li>
                     <li><a href="QuemSomos.html">Quem Somos?</a></li>
                     <li><a href="Duvidas.html">Dúvidas?</a></li>
                     <li><a href="Noticias.html">Notícias</a></li>
-                    <li><a href="RedeSociais.html">Contatos</a></li>
+                    <li><a href="RedeSociais.html">Rede Sociais</a></li>
                 </ul>
             </nav>
         </div>
     </header>
-    <main>
-        <section>
-            <div class="selecao">
-            <h2>Escolha quem você quer adotar:</h2>
-            <a  href="#gatinhos" style="font-size: 0px;">
-                <img src="assets/img/PAGINA-ADOÇÃO/P-A-imagemGATO.png" alt="Gatinhos" width="150">
-                <button>Gatinhos</button>
-            </a>
 
-            <a href="#cachorros" style="font-size: 0px;">
-                <img src="assets/img/PAGINA-ADOÇÃO/P-A-imagemDOG.png" alt="Cachorros" width="150">
-                <button>cachorro</button>
-            </a>
+    <main id="main">
+        <section class="hero-adotar">
+            <h1>Encontre seu Melhor Amigo</h1>
+            <p>Seu lar pode ser o recomeço que eles tanto precisam. Conheça nossos animais disponíveis para adoção responsável.</p>
+            <div class="selecao">
+                <a href="#gatinhos" class="btn-selecao">
+                    <img src="assets/img/PAGINA-ADO├ç├âO/P-A-imagemGATO.png" alt="Gatinhos">
+                    <button class="btn-primary">Gatinhos</button>
+                </a>
+                <a href="#cachorros" class="btn-selecao">
+                    <img src="assets/img/PAGINA-ADO├ç├âO/P-A-imagemDOG.png" alt="Cachorros">
+                    <button class="btn-primary">Cachorros</button>
+                </a>
             </div>
         </section>
 
-        <section>
-            <h2 id="gatinhos">Gatinhos para adoção</h2>
+        <!-- Seção dos Gatos -->
+        <section class="adotar-section" id="gatinhos">
+            <h2>Gatinhos para Adoção</h2>
+            <div class="adotar-grid">
+                
+                <article class="pet-card">
+                    <h3>Difusor</h3>
+                    <img src="assets/img/gatos/GATO-DIFUSOR.png" alt="Difusor">
+                    <p>Difusor é um gatinho macho que foi encontrado em uma fábrica de peças automotivas. Estava muito magro, mas hoje está saudável e cheio de amor!</p>
+                    <a href="formulario.html" class="btn-secondary">Adotar</a>
+                </article>
 
-            <!--Seção dos Gatos-->
-            <article>
-                <h3>Difusor</h3>
-                <img src="assets/img/gatos/GATO-DIFUSOR.png" alt="Difusor" width="100">
-                <p>Difusor é um gatinho macho que foi encontrado em uma fábrica de peças automotivas. Estava muito
-                    magro,
-                    mas
-                    hoje
-                    está saudável e cheio de amor!</p>
-            <a href="formulario.html">
-                <button>Adotar</button>
-            </article>
-            </a>
+                <article class="pet-card">
+                    <h3>Luzia</h3>
+                    <img src="assets/img/gatos/GATO-LUZIA.png" alt="Luzia">
+                    <p>Luzia foi resgatada após um pedido de ajuda. É uma princesa muito carinhosa!</p>
+                    <a href="formulario.html" class="btn-secondary">Adotar</a>
+                </article>
 
-            <article>
-                <h3>Luzia</h3>
-                <img src="assets/img/gatos/GATO-LUZIA.png" alt="Luzia" width="100">
-                <p>Luzia foi resgatada após um pedido de ajuda. É uma princesa muito carinhosa!</p>
-                <a href="formulario.html">
-                <button>Adotar</button>
-                </a>
-            </article>
+                <article class="pet-card">
+                    <h3>Mimi</h3>
+                    <img src="assets/img/gatos/GATO-MIMI.png" alt="Mimi">
+                    <p>Mimi foi abandonada em uma residência. É uma gatinha muito amorosa e carente.</p>
+                    <a href="formulario.html" class="btn-secondary">Adotar</a>
+                </article>
 
-            <article>
-                <h3>Mimi</h3>
-                <img src="assets/img/gatos/GATO-MIMI.png" alt="Mimi" width="100">
-                <p>Mimi foi abandonada em uma residência. É uma gatinha muito amorosa e carente.</p>
-                <a href="formulario.html">
-                <button>Adotar</button>
-                </a>
-            </article>
+                <article class="pet-card">
+                    <h3>Bartô</h3>
+                    <img src="assets/img/gatos/GATO-BARTO.png" alt="Bartô">
+                    <p>Bartô foi resgatado com seus irmãos. É o único que ainda espera por um lar cheio de amor.</p>
+                    <a href="formulario.html" class="btn-secondary">Adotar</a>
+                </article>
 
-            <article>
-                <h3>Bartô</h3>
-                <img src="assets/img/gatos/GATO-BARTO.png" alt="Bartô" width="100">
-                <p>Bartô foi resgatado com seus irmãos. É o único que ainda espera por um lar cheio de amor.</p>
-                <a href="formulario.html">
-                <button>Adotar</button>
-                </a>
-            </article>
-
+            </div>
         </section>
 
 
         <!-- Seção dos Cachorros -->
-        <section>
-            <h2 id="cachorros">Cachorros para adoção</h2>
+        <section class="adotar-section" id="cachorros">
+            <h2>Cachorros para Adoção</h2>
+            <div class="adotar-grid">
 
-            <article>
-                <h3>Branca</h3>
-                <img src="assets/img/CACHORROS/Branca.png" alt="Branca" width="100">
-                <p>Branca foi retirada de maus-tratos. É dócil, querida e brincalhona, mas tem certo medo.</p>
-                <a href="formulario.html">
-                <button>Adotar</button>
-                </a>
-            </article>
+                <article class="pet-card">
+                    <h3>Branca</h3>
+                    <img src="assets/img/CACHORROS/Branca.png" alt="Branca">
+                    <p>Branca foi retirada de maus-tratos. É dócil, querida e brincalhona, mas tem certo medo.</p>
+                    <a href="formulario.html" class="btn-secondary">Adotar</a>
+                </article>
 
-            <article>
-                <h3>Glória e Cléo</h3>
-                <img src="assets/img/CACHORROS/Glória.png" alt="Glória" width="100">
-                <img src="assets/img/CACHORROS/cleo (adotar).png" alt="Cléo" width="100">
-                <p>Glória (mãe) e Cléo (filha) foram encontradas na BR. São dóceis, ativas e carinhosas. Precisam de
-                    espaço
-                    e
-                    amor.
-                </p>
-                <a href="formulario.html">
-                <button>Adotar</button>
-                </a>
-            </article>
+                <article class="pet-card">
+                    <h3>Glória e Cléo</h3>
+                    <img src="assets/img/CACHORROS/Glria.png" alt="Glória">
+                    <img src="assets/img/CACHORROS/cleo (adotar).png" alt="Cléo">
+                    <p>Glória (mãe) e Cléo (filha) foram encontradas na BR. São dóceis, ativas e carinhosas. Precisam de espaço e amor.</p>
+                    <a href="formulario.html" class="btn-secondary">Adotar</a>
+                </article>
 
-            <article>
-                <h3>Luma</h3>
-                <img src="assets/img/CACHORROS/Luma.png" alt="Luma" width="100">
-                <p>Luma vivia nas ruas com seu irmão Juca. Ele foi adotado, ela ainda espera por um lar.</p>
-                <a href="formulario.html">
-                <button>Adotar</button>
-                </a>
-            </article>
+                <article class="pet-card">
+                    <h3>Luma</h3>
+                    <img src="assets/img/CACHORROS/Luma.png" alt="Luma">
+                    <p>Luma vivia nas ruas com seu irmão Juca. Ele foi adotado, ela ainda espera por um lar.</p>
+                    <a href="formulario.html" class="btn-secondary">Adotar</a>
+                </article>
 
-            <article>
-                <h3>Mavie</h3>
-                <img src="assets/img/CACHORROS/Mavie.png" alt="Mavie" width="100">
-                <p>Mavie foi resgatada com a irmã Maia, é carinhosa e protetora, precisa de espaço e carinho.</p>
-                <a href="formulario.html">
-                <button>Adotar</button>
-                </a>
-            </article>
+                <article class="pet-card">
+                    <h3>Mavie</h3>
+                    <img src="assets/img/CACHORROS/Mavie.png" alt="Mavie">
+                    <p>Mavie foi resgatada com a irmã Maia, é carinhosa e protetora, precisa de espaço e carinho.</p>
+                    <a href="formulario.html" class="btn-secondary">Adotar</a>
+                </article>
 
+            </div>
         </section>
-        <br>
     </main>
+
     <footer role="contentinfo">
         <nav class="footer-nav" aria-label="Navegação do rodapé">
             <ul>
                 <li><a href="RedeSociais.html">Rede Sociais</a></li>
                 <li><a href="QuemSomos.html">Quem Somos</a></li>
                 <li><a href="Duvidas.html">Dúvidas Frequentes</a></li>
-                <li><a href="adotar.html">Adotar</a></li>
+                
             </ul>
         </nav>
         <div class="footer-info">

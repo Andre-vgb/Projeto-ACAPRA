@@ -8,12 +8,12 @@ body {
     padding: 20px;
 }
 :root {
-    --cor-primaria: #FF6B6B;
-    --cor-secundaria: #C3B1E6;
-    --cor-fundo: #F5F3F8;
+    --cor-primaria: #6C4F9F; /* Roxo principal da logo */
+    --cor-secundaria: #FACC15; /* Amarelo de destaque */
+    --cor-fundo: #F5F3F8; /* Fundo claro para contraste */
     --cor-texto: #333;
     --cor-texto-claro: #FFFFFF;
-    --cor-hover: #FF5757;
+    --cor-hover: #4F358C; /* Roxo mais escuro para hover/fundo de cabeçalho */
     --sombra: 0 4px 15px rgba(0, 0, 0, 0.1);
     --border-radius: 15px;
     --espacamento: 2rem;
@@ -28,7 +28,7 @@ body {
 
 /* Header e navegação */
 header {
-    background: linear-gradient(135deg, var(--cor-primaria), var(--cor-hover));
+    background: linear-gradient(135deg, var(--cor-hover), var(--cor-primaria)); /* Usando o roxo mais escuro */
     position: sticky;
     top: 0;
     z-index: 1000;
@@ -48,7 +48,6 @@ header {
     border-radius: var(--border-radius);
     padding: 2rem;
     text-align: center;
-    margin-bottom: 2rem;
 }
 
 header h1 {
@@ -135,7 +134,7 @@ main {
 
 /* Footer */
 footer {
-    background: linear-gradient(135deg, var(--cor-secundaria), #B8A9D9);
+    background: linear-gradient(135deg, var(--cor-hover), var(--cor-primaria));
     border-radius: var(--border-radius);
     padding: 2rem;
     margin-top: 3rem;
@@ -152,7 +151,7 @@ footer {
 }
 
 .footer-nav a {
-    color: var(--cor-texto);
+    color: var(--cor-texto-claro); /* Mudando para texto claro para melhor contraste no footer */
     text-decoration: none;
     font-weight: 500;
     transition: color 0.3s ease;
@@ -160,7 +159,7 @@ footer {
 
 .footer-nav a:hover,
 .footer-nav a:focus {
-    color: var(--cor-primaria);
+    color: var(--cor-secundaria); /* Usando o amarelo para hover */
 }
 
 .footer-info {
@@ -169,6 +168,7 @@ footer {
     justify-content: center;
     gap: 1rem;
     margin-top: 1rem;
+    color: var(--cor-texto-claro); /* Garantindo que o texto de copyright seja claro */
 }
 
 .footer-info img {
@@ -200,7 +200,7 @@ footer {
         left: -100%;
         top: 70px;
         flex-direction: column;
-        background: linear-gradient(135deg, var(--cor-primaria), var(--cor-hover));
+        background: linear-gradient(135deg, var(--cor-hover), var(--cor-primaria));
         width: 100%;
         text-align: center;
         transition: 0.3s;
@@ -263,4 +263,963 @@ footer {
 *:focus {
     outline: 2px solid var(--cor-primaria);
     outline-offset: 2px;
+}
+
+
+
+/* Estilos específicos para o Formulário de Adoção (formulario.html) */
+
+main {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: var(--espacamento);
+    background-color: white; /* Fundo branco para o conteúdo principal */
+    border-radius: var(--border-radius);
+    box-shadow: var(--sombra);
+}
+
+section {
+    background-color: white;
+    border-radius: var(--border-radius);
+    padding: 2rem;
+    margin-bottom: 2rem;
+    box-shadow: none; /* A sombra já está no main */
+}
+
+section h2 {
+    color: var(--cor-primaria);
+    font-size: 2rem;
+    margin-bottom: 2rem;
+    text-align: center;
+    position: relative;
+}
+
+section h2::after {
+    content: '';
+    position: absolute;
+    bottom: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100px;
+    height: 3px;
+    background: linear-gradient(135deg, var(--cor-primaria), var(--cor-hover));
+    border-radius: 2px;
+}
+
+fieldset {
+    border: 2px solid var(--cor-secundaria);
+    border-radius: var(--border-radius);
+    padding: 2rem;
+    margin-bottom: 2rem;
+    background: linear-gradient(135deg, rgba(108, 79, 159, 0.05), rgba(250, 204, 21, 0.05)); /* Usando as novas cores */
+    transition: background-color 0.3s ease;
+}
+
+legend {
+    background: linear-gradient(135deg, var(--cor-primaria), var(--cor-hover));
+    color: white;
+    padding: 0.5rem 1.5rem;
+    border-radius: 25px;
+    font-weight: 600;
+    font-size: 1.1rem;
+    box-shadow: var(--sombra);
+    text-align: center;
+}
+
+
+label {
+    display: block;
+    margin-top: 1rem;
+    margin-bottom: 0.5rem;
+    font-weight: 600;
+    color: var(--cor-texto);
+}
+
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+textarea {
+    width: 100%;
+    padding: 0.8rem;
+    border: 2px solid #ddd;
+    border-radius: 10px;
+    font-size: 1rem;
+    transition: all 0.3s ease;
+    background-color: white;
+    margin-bottom: 1rem;
+}
+
+input[type="text"]:focus,
+input[type="email"]:focus,
+input[type="tel"]:focus,
+textarea:focus {
+    outline: none;
+    border-color: var(--cor-primaria);
+    box-shadow: 0 0 0 3px rgba(108, 79, 159, 0.2); /* Usando a nova cor primária */
+    transform: translateY(-2px);
+}
+
+input[type="radio"] {
+    margin-right: 0.5rem;
+    margin-left: 1rem;
+    transform: scale(1.2);
+    accent-color: var(--cor-primaria);
+}
+
+label:has(input[type="radio"]) {
+    display: inline-block;
+    margin-right: 1rem;
+    margin-bottom: 1rem;
+    font-weight: 500;
+    cursor: pointer;
+    padding: 0.5rem;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+label:has(input[type="radio"]):hover {
+    background-color: rgba(108, 79, 159, 0.1); /* Usando a nova cor primária */
+}
+
+p {
+    font-weight: 600;
+    margin-top: 1.5rem;
+    margin-bottom: 0.5rem;
+}
+
+textarea {
+    resize: vertical;
+    min-height: 100px;
+}
+
+input[type="file"] {
+    width: 100%;
+    padding: 1rem;
+    border: 2px dashed var(--cor-primaria);
+    border-radius: 10px;
+    background: linear-gradient(135deg, rgba(108, 79, 159, 0.05), rgba(250, 204, 21, 0.05)); /* Usando as novas cores */
+    cursor: pointer;
+    transition: all 0.3s ease;
+    margin-top: 0.5rem;
+}
+
+input[type="file"]:hover,
+input[type="file"]:focus {
+    border-color: var(--cor-hover);
+    background: linear-gradient(135deg, rgba(108, 79, 159, 0.1), rgba(250, 204, 21, 0.1)); /* Usando as novas cores */
+    transform: translateY(-2px);
+}
+
+li {
+    margin-bottom: 0.5rem;
+    padding-left: 0.5rem;
+}
+
+h4 {
+    color: var(--cor-primaria);
+    margin-bottom: 1rem;
+    font-size: 1.2rem;
+}
+
+input:valid {
+    border-color: #4CAF50;
+}
+
+input:invalid:not(:placeholder-shown) {
+    border-color: #f44336;
+}
+
+fieldset:hover {
+    background: linear-gradient(135deg, rgba(108, 79, 159, 0.08), rgba(250, 204, 21, 0.08)); /* Usando as novas cores */
+}
+
+input[type="text"]:hover,
+input[type="email"]:hover,
+input[type="tel"]:hover,
+textarea:hover {
+    border-color: var(--cor-secundaria);
+}
+
+
+
+
+/* Estilos para o Botão de Envio */
+.form-actions {
+    text-align: center;
+    margin-top: 3rem;
+}
+
+.submit-button {
+    background-color: var(--cor-primaria);
+    color: var(--cor-texto-claro);
+    border: none;
+    padding: 1rem 3rem;
+    font-size: 1.2rem;
+    font-weight: bold;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 5px 15px rgba(108, 79, 159, 0.4);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.submit-button:hover {
+    background-color: var(--cor-hover);
+    box-shadow: 0 8px 20px rgba(108, 79, 159, 0.6);
+    transform: translateY(-3px);
+}
+
+.submit-button:active {
+    transform: translateY(-1px);
+}
+
+/* Melhorias de layout para o formulário */
+
+/* Adicionando um container para os campos de rádio para melhor alinhamento */
+.radio-group {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+    margin-top: 0.5rem;
+    margin-bottom: 1.5rem;
+}
+
+.radio-group label {
+    margin-top: 0;
+    margin-bottom: 0;
+    padding: 0.5rem 1rem;
+    border: 1px solid var(--cor-secundaria);
+    border-radius: 5px;
+    transition: all 0.3s ease;
+}
+
+.radio-group label:hover {
+    background-color: rgba(250, 204, 21, 0.2);
+    border-color: var(--cor-hover);
+}
+
+.radio-group input[type="radio"]:checked + label {
+    background-color: var(--cor-secundaria);
+    color: var(--cor-texto);
+    border-color: var(--cor-primaria);
+    font-weight: 700;
+}
+
+.radio-group input[type="radio"] {
+    display: none; /* Esconde o radio button nativo */
+}
+
+/* Estilizando o body para usar a cor de fundo */
+body {
+    background-color: var(--cor-fundo);
+}
+
+/* Responsividade para o formulário */
+@media (max-width: 600px) {
+    main {
+        padding: 1rem;
+    }
+
+    fieldset {
+        padding: 1rem;
+    }
+
+    legend {
+        font-size: 1rem;
+        padding: 0.5rem 1rem;
+    }
+
+    .radio-group {
+        flex-direction: column;
+        gap: 0.5rem;
+    }
+
+    .submit-button {
+        padding: 0.8rem 2rem;
+        font-size: 1rem;
+    }
+}
+
+
+
+
+/* Estilos para a Página de Redes Sociais (RedeSociais.html) */
+
+.social-media-page {
+    max-width: 900px;
+    margin: 3rem auto;
+    padding: var(--espacamento);
+    text-align: center;
+    background-color: white;
+    border-radius: var(--border-radius);
+    box-shadow: var(--sombra);
+}
+
+.social-media-page h1 {
+    color: var(--cor-primaria);
+    font-size: 2.5rem;
+    margin-bottom: 2rem;
+    padding-bottom: 1rem;
+    border-bottom: 3px solid var(--cor-secundaria);
+    display: inline-block;
+}
+
+.social-media-page section {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 3rem;
+    margin-top: 3rem;
+}
+
+.social-media-page article {
+    flex-basis: 200px; /* Tamanho base para cada card */
+    padding: 1.5rem;
+    border-radius: var(--border-radius);
+    transition: all 0.3s ease;
+    cursor: pointer;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+}
+
+.social-media-page article:hover {
+    transform: translateY(-5px) scale(1.03);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+    background-color: rgba(108, 79, 159, 0.05); /* Leve fundo com a cor primária */
+}
+
+.social-media-page figure {
+    margin: 0;
+}
+
+.social-media-page img {
+    width: 80px; /* Aumentando o tamanho do ícone */
+    height: 80px;
+    margin-bottom: 1rem;
+    transition: transform 0.3s ease;
+}
+
+.social-media-page article:hover img {
+    transform: rotate(5deg);
+}
+
+.social-media-page figcaption {
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: var(--cor-texto);
+}
+
+.social-media-page a {
+    text-decoration: none;
+    color: inherit;
+}
+
+/* Responsividade para a página de redes sociais */
+@media (max-width: 768px) {
+    .social-media-page {
+        margin: 1.5rem auto;
+        padding: 1rem;
+    }
+
+    .social-media-page section {
+        flex-direction: column;
+        gap: 1.5rem;
+    }
+
+    .social-media-page article {
+        flex-basis: 100%;
+    }
+}
+
+
+
+
+/* ==========================================================================
+   Estilos da Página Inicial (Inicio.html) - Migrados do CSS interno
+   ========================================================================== */
+
+/* Hero Section */
+.hero {
+    background: linear-gradient(135deg, rgba(108, 79, 159, 0.1), rgba(250, 204, 21, 0.1));
+    border-radius: var(--border-radius);
+    padding: 3rem;
+    text-align: center;
+    margin-bottom: 3rem;
+    box-shadow: var(--sombra);
+}
+
+.hero h1 {
+    font-size: 2.5rem;
+    color: var(--cor-primaria);
+    margin-bottom: 1rem;
+}
+
+.hero p {
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
+    color: var(--cor-texto);
+}
+
+.hero img {
+    max-width: 500px;
+    width: 100%;
+    border-radius: var(--border-radius);
+    box-shadow: var(--sombra);
+}
+
+/* Section Title */
+.section-title {
+    text-align: center;
+    font-size: 2.2rem;
+    color: var(--cor-primaria);
+    margin-bottom: 2rem;
+    position: relative;
+}
+
+.section-title::after {
+    content: '';
+    position: absolute;
+    bottom: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100px;
+    height: 4px;
+    background: linear-gradient(135deg, var(--cor-primaria), var(--cor-hover));
+    border-radius: 2px;
+}
+
+/* Botões de Ação */
+.action-section {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+    margin-bottom: 3rem;
+}
+
+.btn {
+    display: inline-block;
+    color: white;
+    padding: 1rem 2rem;
+    border: none;
+    border-radius: 25px;
+    font-size: 1rem;
+    font-weight: 600;
+    text-decoration: none;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    background-color: var(--cor-primaria);
+}
+
+.btn-secondary {
+    background-color: var(--cor-secundaria);
+    color: var(--cor-texto);
+    box-shadow: 0 4px 15px rgba(250, 204, 21, 0.4);
+}
+
+.btn-warning {
+    background-color: #FFA500; /* Laranja para aviso */
+}
+
+.btn:hover, .btn:focus {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
+}
+
+/* Alerta */
+.alert {
+    background: linear-gradient(135deg, #FFF3CD, #FFEAA7);
+    border-left: 5px solid var(--cor-primaria);
+    border-radius: 10px;
+    padding: 2rem;
+    margin: 2rem 0;
+    box-shadow: var(--sombra);
+}
+
+.alert h2 {
+    color: #856404;
+    margin-bottom: 1rem;
+    font-size: 1.8rem;
+}
+
+.alert-content {
+    background-color: white;
+    padding: 1.5rem;
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.alert-content p {
+    margin: 0;
+    line-height: 1.6;
+}
+
+.alert-content strong {
+    color: var(--cor-primaria);
+}
+
+/* Estatísticas */
+.stats {
+    background-color: white;
+    border-radius: var(--border-radius);
+    padding: 2rem;
+    margin: 2rem 0;
+    box-shadow: var(--sombra);
+}
+
+.stats-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1rem;
+}
+
+.stat-item {
+    background: linear-gradient(135deg, #F8F9FA, #E9ECEF);
+    padding: 1.5rem;
+    border-radius: 10px;
+    border-left: 4px solid var(--cor-primaria);
+    transition: transform 0.3s ease;
+}
+
+.stat-item:hover,
+.stat-item:focus-within {
+    transform: translateY(-5px);
+    box-shadow: var(--sombra);
+}
+
+.stat-item strong {
+    color: var(--cor-primaria);
+    display: block;
+    margin-bottom: 0.5rem;
+}
+
+/* Como ajudar */
+.help-section {
+    background-color: white;
+    border-radius: var(--border-radius);
+    padding: 2rem;
+    margin: 2rem 0;
+    box-shadow: var(--sombra);
+}
+
+.help-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2rem;
+}
+
+.help-card {
+    background: linear-gradient(135deg, #F8F9FA, #E9ECEF);
+    border-radius: var(--border-radius);
+    padding: 2rem;
+    text-align: center;
+    transition: all 0.3s ease;
+    border: 2px solid transparent;
+}
+
+.help-card:hover,
+.help-card:focus-within {
+    transform: translateY(-10px);
+    border-color: var(--cor-primaria);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+}
+
+.help-card img {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    border: 4px solid var(--cor-primaria);
+    margin-bottom: 1rem;
+    object-fit: cover;
+}
+
+.help-card h3 {
+    color: var(--cor-primaria);
+    margin-bottom: 1rem;
+    font-size: 1.3rem;
+}
+
+.help-card p {
+    line-height: 1.6;
+    text-align: left;
+}
+
+/* ==========================================================================
+   Estilos da Galeria de Animais (Novo)
+   ========================================================================== */
+
+.pet-gallery {
+    margin-bottom: 3rem;
+}
+
+.gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+}
+
+.pet-card {
+    background-color: white;
+    border-radius: var(--border-radius);
+    overflow: hidden;
+    box-shadow: var(--sombra);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    text-align: center;
+    border: 2px solid var(--cor-fundo);
+}
+
+.pet-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(108, 79, 159, 0.2); /* Sombra com cor primária */
+    border-color: var(--cor-primaria);
+}
+
+.pet-card-image {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+}
+
+.pet-card:hover .pet-card-image {
+    transform: scale(1.05);
+}
+
+.pet-card-info {
+    padding: 1.5rem;
+}
+
+.pet-card-info h3 {
+    color: var(--cor-primaria);
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+}
+
+.pet-card-info p {
+    color: var(--cor-texto);
+    margin-bottom: 1rem;
+}
+
+.pet-card-info a {
+    display: inline-block;
+    background-color: var(--cor-secundaria);
+    color: var(--cor-texto);
+    padding: 0.5rem 1.5rem;
+    border-radius: 20px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: background-color 0.3s ease;
+}
+
+.pet-card-info a:hover {
+    background-color: var(--cor-primaria);
+    color: var(--cor-texto-claro);
+}
+
+
+
+
+/* ==========================================================================
+   Estilos da Página de Adoção (adotar.html)
+   ========================================================================== */
+
+main {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.adotar-section {
+    background-color: white;
+    padding: 2rem;
+    margin-bottom: 2rem;
+    border-radius: var(--border-radius);
+    box-shadow: var(--sombra);
+}
+
+.adotar-section h2 {
+    font-size: 2rem;
+    margin-bottom: 2rem;
+    text-align: center;
+    position: relative;
+    color: var(--cor-primaria);
+}
+
+/* Seção de seleção de tipo de animal */
+.selecao {
+    text-align: center;
+    background: linear-gradient(135deg, rgba(108, 79, 159, 0.1), rgba(250, 204, 21, 0.1));
+    padding: 2rem;
+    border-radius: var(--border-radius);
+    margin-bottom: 3rem;
+}
+
+.selecao a {
+    display: inline-block;
+    margin: 1rem;
+    text-decoration: none;
+    transition: transform 0.3s ease;
+}
+
+.selecao a:hover {
+    transform: translateY(-10px);
+}
+
+.selecao img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    border: 4px solid var(--cor-primaria);
+    margin-bottom: 1rem;
+    object-fit: cover;
+}
+
+.selecao button {
+    display: block;
+    border: none;
+    padding: 1rem 2rem;
+    border-radius: 25px;
+    font-size: 1.1rem;
+    font-weight: 600;
+    cursor: pointer;
+    margin: 0 auto;
+    background-color: var(--cor-primaria);
+    color: white;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+.selecao button:hover {
+    transform: translateY(-3px);
+    background-color: var(--cor-hover);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
+}
+
+/* Estilo para os cards de animais */
+.adotar-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+}
+
+.adotar-article {
+    background: linear-gradient(135deg, #F8F9FA, #E9ECEF);
+    padding: 2rem;
+    margin-bottom: 2rem;
+    text-align: center;
+    transition: all 0.3s ease;
+    border: 2px solid transparent;
+    border-radius: var(--border-radius);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.adotar-article:hover {
+    transform: translateY(-10px);
+    border-color: var(--cor-primaria);
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.2);
+}
+
+.adotar-article h3 {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+    color: var(--cor-primaria);
+}
+
+.adotar-article img {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    border: 3px solid var(--cor-secundaria);
+    margin: 0.5rem;
+    transition: transform 0.3s ease;
+    object-fit: cover;
+}
+
+.adotar-article img:hover {
+    transform: scale(1.1);
+}
+
+.adotar-article p {
+    margin: 1rem 0;
+    line-height: 1.6;
+    background-color: white;
+    padding: 1rem;
+    border-radius: 10px;
+}
+
+.adotar-article a {
+    text-decoration: none;
+}
+
+.adotar-article button {
+    background: linear-gradient(135deg, #4CAF50, #45a049);
+    color: white;
+    border: none;
+    padding: 1rem 2rem;
+    border-radius: 25px;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    margin-top: 1rem;
+    transition: all 0.3s ease;
+}
+
+.adotar-article button:hover {
+    background: linear-gradient(135deg, #3d8b40, #4CAF50);
+    transform: translateY(-3px);
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .adotar-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+
+
+/* ==========================================================================
+   Estilos da Página de Adoção (adotar.html)
+   ========================================================================== */
+
+.hero-adotar {
+    background-color: var(--cor-fundo);
+    padding: 40px 20px;
+    text-align: center;
+    border-bottom: 2px solid var(--cor-primaria);
+}
+
+.hero-adotar h1 {
+    color: var(--cor-primaria);
+    font-size: 2.5em;
+    margin-bottom: 10px;
+}
+
+.hero-adotar p {
+    color: #555;
+    font-size: 1.1em;
+    margin-bottom: 30px;
+}
+
+.hero-adotar .selecao {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
+}
+
+.hero-adotar .btn-selecao {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-decoration: none;
+    transition: transform 0.3s ease;
+}
+
+.hero-adotar .btn-selecao:hover {
+    transform: translateY(-5px);
+}
+
+.hero-adotar .btn-selecao img {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 5px solid var(--cor-secundaria);
+    margin-bottom: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.adotar-section {
+    padding: 40px 20px;
+    text-align: center;
+}
+
+.adotar-section h2 {
+    color: var(--cor-primaria);
+    font-size: 2em;
+    margin-bottom: 30px;
+    border-bottom: 3px solid var(--cor-secundaria);
+    display: inline-block;
+    padding-bottom: 5px;
+}
+
+.adotar-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.pet-card {
+    background-color: #fff;
+    border-radius: 15px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.05);
+    padding: 20px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.pet-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+}
+
+.pet-card h3 {
+    color: var(--cor-hover);
+    font-size: 1.5em;
+    margin-top: 0;
+    margin-bottom: 10px;
+}
+
+.pet-card img {
+    width: 100%;
+    max-width: 200px;
+    height: auto;
+    border-radius: 10px;
+    margin-bottom: 15px;
+    border: 3px solid var(--cor-primaria);
+}
+
+.pet-card p {
+    color: #666;
+    margin-bottom: 20px;
+    flex-grow: 1; /* Garante que o parágrafo ocupe o espaço e alinhe o botão */
+}
+
+.pet-card .btn-secondary {
+    background-color: var(--cor-secundaria);
+    color: var(--cor-primaria);
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+    border: none;
+    cursor: pointer;
+    margin-top: auto; /* Empurra o botão para o final do card */
+}
+
+.pet-card .btn-secondary:hover {
+    background-color: var(--cor-primaria);
+    color: var(--cor-secundaria);
+}
+
+/* Estilo para a imagem dupla (Glória e Cléo) */
+.pet-card img:nth-child(3) {
+    margin-top: -10px; /* Ajuste para sobrepor a imagem anterior levemente */
+}
+
+@media (max-width: 768px) {
+    .hero-adotar h1 {
+        font-size: 2em;
+    }
+
+    .adotar-section h2 {
+        font-size: 1.5em;
+    }
 }

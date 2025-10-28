@@ -7,170 +7,10 @@
     <link rel="stylesheet" href="assets/style.css">
 </head>
 
-<style>
-    section {
-        background-color: white;
-        border-radius: var(--border-radius);
-        padding: 2rem;
-        margin-bottom: 2rem;
-        box-shadow: var(--sombra);
-    }
-
-    section h2 {
-        color: var(--cor-primaria);
-        font-size: 2rem;
-        margin-bottom: 2rem;
-        text-align: center;
-        position: relative;
-    }
-
-    section h2::after {
-        content: '';
-        position: absolute;
-        bottom: -10px;
-        left: 50%;
-        transform: translateX(-50%);
-        width: 100px;
-        height: 3px;
-        background: linear-gradient(135deg, var(--cor-primaria), var(--cor-hover));
-        border-radius: 2px;
-    }
-
-    fieldset {
-        border: 2px solid var(--cor-secundaria);
-        border-radius: var(--border-radius);
-        padding: 2rem;
-        margin-bottom: 2rem;
-        background: linear-gradient(135deg, rgba(255, 107, 107, 0.05), rgba(195, 177, 230, 0.05));
-    }
-
-    legend {
-        background: linear-gradient(135deg, var(--cor-primaria), var(--cor-hover));
-        color: white;
-        padding: 0.5rem 1.5rem;
-        border-radius: 25px;
-        font-weight: 600;
-        font-size: 1.1rem;
-        box-shadow: var(--sombra);
-        text-align: center;
-    }
 
 
-    label {
-        display: block;
-        margin-top: 1rem;
-        margin-bottom: 0.5rem;
-        font-weight: 600;
-        color: var(--cor-texto);
-    }
 
-    input[type="text"],
-    input[type="email"],
-    input[type="tel"],
-    textarea {
-        width: 100%;
-        padding: 0.8rem;
-        border: 2px solid #ddd;
-        border-radius: 10px;
-        font-size: 1rem;
-        transition: all 0.3s ease;
-        background-color: white;
-        margin-bottom: 1rem;
-    }
-
-    input[type="text"]:focus,
-    input[type="email"]:focus,
-    input[type="tel"]:focus,
-    textarea:focus {
-        outline: none;
-        border-color: var(--cor-primaria);
-        box-shadow: 0 0 0 3px rgba(255, 107, 107, 0.2);
-        transform: translateY(-2px);
-    }
-
-    input[type="radio"] {
-        margin-right: 0.5rem;
-        margin-left: 1rem;
-        transform: scale(1.2);
-        accent-color: var(--cor-primaria);
-    }
-
-    label:has(input[type="radio"]) {
-        display: inline-block;
-        margin-right: 1rem;
-        margin-bottom: 1rem;
-        font-weight: 500;
-        cursor: pointer;
-        padding: 0.5rem;
-        border-radius: 5px;
-        transition: background-color 0.3s ease;
-    }
-
-    label:has(input[type="radio"]):hover {
-        background-color: rgba(255, 107, 107, 0.1);
-    }
-
-    p {
-        font-weight: 600;
-        margin-top: 1.5rem;
-        margin-bottom: 0.5rem;
-    }
-
-    textarea {
-        resize: vertical;
-        min-height: 100px;
-    }
-
-    input[type="file"] {
-        width: 100%;
-        padding: 1rem;
-        border: 2px dashed var(--cor-primaria);
-        border-radius: 10px;
-        background: linear-gradient(135deg, rgba(255, 107, 107, 0.05), rgba(195, 177, 230, 0.05));
-        cursor: pointer;
-        transition: all 0.3s ease;
-        margin-top: 0.5rem;
-    }
-
-    input[type="file"]:hover,
-    input[type="file"]:focus {
-        border-color: var(--cor-hover);
-        background: linear-gradient(135deg, rgba(255, 107, 107, 0.1), rgba(195, 177, 230, 0.1));
-        transform: translateY(-2px);
-    }
-
-    li {
-        margin-bottom: 0.5rem;
-        padding-left: 0.5rem;
-    }
-
-    h4 {
-        color: var(--cor-primaria);
-        margin-bottom: 1rem;
-        font-size: 1.2rem;
-    }
-
-    input:valid {
-        border-color: #4CAF50;
-    }
-
-    input:invalid:not(:placeholder-shown) {
-        border-color: #f44336;
-    }
-
-    fieldset:hover {
-        background: linear-gradient(135deg, rgba(255, 107, 107, 0.08), rgba(195, 177, 230, 0.08));
-    }
-
-    input[type="text"]:hover,
-    input[type="email"]:hover,
-    input[type="tel"]:hover,
-    textarea:hover {
-        border-color: var(--cor-secundaria);
-    }
-</style>
-
-<body style="font-family: Arial, sans-serif; background-color: #E5DBEB; color: #000; padding: 20px;">
+<body>
     <header role="banner">
         <div class="header-container">
             <a href="#main" class="logo" aria-label="ACAPRA - Ir para conteúdo principal">
@@ -235,37 +75,51 @@
                     <input type="text" id="outros_animais" name="outros_animais"><br>
 
                     <p>São castrados e vacinados?</p>
-                    <label><input type="radio" name="castrados" value="sim"> Sim</label>
-                    <label><input type="radio" name="castrados" value="nao"> Não</label><br>
+                    <div class="radio-group">
+                        <label><input type="radio" name="castrados" value="sim"> Sim</label>
+                        <label><input type="radio" name="castrados" value="nao"> Não</label>
+                    </div><br>
 
                     <p>Todos da sua residência concordam com a adoção?</p>
-                    <label><input type="radio" name="residencia_concorda" value="sim"> Sim</label>
-                    <label><input type="radio" name="residencia_concorda" value="nao"> Não</label><br>
+                    <div class="radio-group">
+                        <label><input type="radio" name="residencia_concorda" value="sim"> Sim</label>
+                        <label><input type="radio" name="residencia_concorda" value="nao"> Não</label>
+                    </div><br>
 
                     <label for="local">Qual o local em que o animal irá ficar? Possui espaço adequado e
                         cercado?</label><br>
                     <input type="text" id="local" name="local"><br>
 
                     <p>O animal terá acesso à rua?</p>
-                    <label><input type="radio" name="acesso_rua" value="sim"> Sim</label>
-                    <label><input type="radio" name="acesso_rua" value="nao"> Não</label>
-                    <label><input type="radio" name="acesso_rua" value="nao_sei"> Não sei</label><br><br>
+                    <div class="radio-group">
+                        <label><input type="radio" name="acesso_rua" value="sim"> Sim</label>
+                        <label><input type="radio" name="acesso_rua" value="nao"> Não</label>
+                        <label><input type="radio" name="acesso_rua" value="nao_sei"> Não sei</label>
+                    </div><br><br>
 
                     <label for="condicoes">Você tem condições físicas, mentais e financeiras de manter um
                         animal?</label><br>
                     <textarea id="condicoes" name="condicoes" rows="3" cols="50"></textarea><br><br>
 
                     <p>A castração e vacinação do animal é OBRIGATÓRIA. Você concorda com isso?</p>
-                    <label><input type="radio" name="castracao_obrigatoria" value="sim"> Sim</label>
-                    <label><input type="radio" name="castracao_obrigatoria" value="nao"> Não</label><br>
+                    <div class="radio-group">
+                        <label><input type="radio" name="castracao_obrigatoria" value="sim"> Sim</label>
+                        <label><input type="radio" name="castracao_obrigatoria" value="nao"> Não</label>
+                    </div><br>
 
                     <p>Existe uma taxa de adoção colaborativa de R$30,00. Você concorda em contribuir?</p>
-                    <label><input type="radio" name="taxa" value="sim"> Sim</label>
-                    <label><input type="radio" name="taxa" value="nao"> Não</label><br>
+                    <div class="radio-group">
+                        <label><input type="radio" name="taxa" value="sim"> Sim</label>
+                        <label><input type="radio" name="taxa" value="nao"> Não</label>
+                    </div><br>
                 </fieldset>
-        </section>
-
-        <section>
+</section>
+	
+	        <div class="form-actions">
+	            <button type="submit" class="submit-button">Enviar Formulário de Adoção</button>
+	        </div>
+	
+	        <section>
 
             <fieldset>
                 <legend>Documentos Obrigatórios</legend>
